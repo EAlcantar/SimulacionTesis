@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpOee 5.07.1 */
+/* MpOee 5.08.0 */
 
 #ifndef _MPOEE_
 #define _MPOEE_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpOee_VERSION
-#define _MpOee_VERSION 5.07.1
+#define _MpOee_VERSION 5.08.0
 #endif
 
 #include <bur/plctypes.h>

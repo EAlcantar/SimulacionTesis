@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?AutomationStudio Version="4.6.3.55 SP"?>
+<?AutomationStudio Version="4.8.2.72"?>
 <Page xmlns="http://br-automation.co.at/AS/VC/Project" Name="MpPackMLBasicUI">
   <Property Name="Description" Value="mapp VC4 template MpPackMLBasicUI"/>
   <Property Name="Height" Value="480"/>
@@ -37,28 +37,35 @@
       <Property Name="Width" Value="640"/>
       <Property Name="Z-Order" Value="1"/>
       <TextGroup>
-        <TextLayer LanguageId="en"/>
-        <TextLayer LanguageId="de"/>
-        <IndexMap/>
+        <TextLayer LanguageId="en">
+          <Text ID="208610" Value="Ver estadísticas de tiempo"/>
+          <Text ID="209460" Value="Piezas \nrechazadas"/>
+          <Text ID="209461" Value="Piezas \nproducidas"/>
+          <Text ID="209462" Value="Tiempo en trabajo"/>
+          <Text ID="209463" Value="Tiempo en mantto."/>
+          <Text ID="209464" Value="Tiempo ocioso"/>
+          <Text ID="209468" Value="Tiempo de ciclo definido"/>
+        </TextLayer>
+        <TextLayer LanguageId="de">
+          <Text ID="208610" Value=""/>
+          <Text ID="209460" Value="Text_1"/>
+          <Text ID="209461" Value="Text_1"/>
+          <Text ID="209462" Value="Text_1"/>
+          <Text ID="209463" Value="Text_1"/>
+          <Text ID="209464" Value="Text_1"/>
+          <Text ID="209468" Value="Text_1"/>
+        </TextLayer>
+        <IndexMap>
+          <Index ID="208610" Value="17"/>
+          <Index ID="209460" Value="19"/>
+          <Index ID="209461" Value="20"/>
+          <Index ID="209462" Value="21"/>
+          <Index ID="209463" Value="22"/>
+          <Index ID="209464" Value="23"/>
+          <Index ID="209468" Value="24"/>
+        </IndexMap>
       </TextGroup>
       <Controls>
-        <Control ClassId="0x00001004" Name="txtGroupControl">
-          <Property Name="Border" Value="Source[local].Border[Mp_GroupControl]"/>
-          <Property Name="ControlID" Value="0"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="Font" Value="Source[local].Font[MpHeader2]"/>
-          <Property Name="Height" Value="384"/>
-          <Property Name="Left" Value="0"/>
-          <Property Name="Multiline" Value="Automatic"/>
-          <Property Name="SimulationIndex" Value="0"/>
-          <Property Name="SimulationValue" Value=""/>
-          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpGroupControl]"/>
-          <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLBasicUIText]"/>
-          <Property Name="TextIndexOffset" Value="0"/>
-          <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="45"/>
-          <Property Name="Width" Value="640"/>
-        </Control>
         <Control ClassId="0x00001002" Name="btnStart">
           <Property Name="BitmapIndexDatapoint" Value="None"/>
           <Property Name="BitmapSource" Value="None"/>
@@ -78,7 +85,7 @@
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="155"/>
+          <Property Name="Top" Value="139"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_1_1]"/>
           <Property Name="Width" Value="70"/>
         </Control>
@@ -90,7 +97,7 @@
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_10_2]"/>
           <Property Name="Height" Value="50"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="568"/>
+          <Property Name="Left" Value="534"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
           <Property Name="PressedForeColor" Value="253"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
@@ -100,7 +107,7 @@
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="265"/>
+          <Property Name="Top" Value="194"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_10_2]"/>
           <Property Name="Width" Value="70"/>
         </Control>
@@ -123,63 +130,9 @@
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="210"/>
+          <Property Name="Top" Value="249"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_11_2]"/>
           <Property Name="Width" Value="70"/>
-        </Control>
-        <Control ClassId="0x00001018" Name="drpModeSelect">
-          <Property Name="Border" Value="Source[local].Border[Mp_InputBorder]"/>
-          <Property Name="ButtonsBitmapGroup" Value="None"/>
-          <Property Name="ButtonsBorder" Value="Source[local].Border[Mp_Flat_grey]"/>
-          <Property Name="ButtonsPressedBitmapGroup" Value="None"/>
-          <Property Name="ControlID" Value="0"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="DropdownBorder" Value="Source[local].Border[Mp_Flat_grey]"/>
-          <Property Name="Height" Value="33"/>
-          <Property Name="IndexDatapoint" Value="Source[global].Variable[DataSource.Source.Visualization.VisCtrl.MpPackMLBasicUIConnect.ModeControl.SelectedIndex]"/>
-          <Property Name="Left" Value="503"/>
-          <Property Name="LeftBitmap" Value="None"/>
-          <Property Name="LeftTextGroup" Value="None"/>
-          <Property Name="MaxDatapoint" Value="Source[global].Variable[DataSource.Source.Visualization.VisCtrl.MpPackMLBasicUIConnect.ModeControl.MaxSelection]"/>
-          <Property Name="MaxIndex" Value="None"/>
-          <Property Name="MinDatapoint" Value="None"/>
-          <Property Name="MinIndex" Value="None"/>
-          <Property Name="OptionDatapoint" Value="None"/>
-          <Property Name="RightBitmap" Value="None"/>
-          <Property Name="RightTextGroup" Value="None"/>
-          <Property Name="SimulationValue" Value="1"/>
-          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLModesNames]"/>
-          <Property Name="TextIndexOffset" Value="0"/>
-          <Property Name="TextSource" Value="MultipleTexts"/>
-          <Property Name="Top" Value="88"/>
-          <Property Name="Width" Value="130"/>
-        </Control>
-        <Control ClassId="0x00001002" Name="btnActivate">
-          <Property Name="BitmapIndexDatapoint" Value="None"/>
-          <Property Name="BitmapSource" Value="None"/>
-          <Property Name="ControlID" Value="0"/>
-          <Property Name="Description" Value=""/>
-          <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_12_1]"/>
-          <Property Name="Height" Value="30"/>
-          <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="503"/>
-          <Property Name="Locking" Value="Datapoint &gt;= Level"/>
-          <Property Name="LockingDatapoint" Value="Source[global].Variable[DataSource.Source.Visualization.VisCtrl.MpPackMLBasicUIConnect.ModeControl.LockActivation]"/>
-          <Property Name="LockingLevel" Value="1"/>
-          <Property Name="Multiline" Value="Automatic"/>
-          <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
-          <Property Name="PressedForeColor" Value="253"/>
-          <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
-          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpControlButton]"/>
-          <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLCmds]"/>
-          <Property Name="TextIndex" Value="10"/>
-          <Property Name="TextIndexDatapoint" Value="None"/>
-          <Property Name="TextSimulationValue" Value="0"/>
-          <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="123"/>
-          <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_12_1]"/>
-          <Property Name="Width" Value="130"/>
         </Control>
         <Control ClassId="0x00001002" Name="brtStop">
           <Property Name="BitmapIndexDatapoint" Value="None"/>
@@ -200,7 +153,7 @@
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="155"/>
+          <Property Name="Top" Value="139"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_2_1]"/>
           <Property Name="Width" Value="70"/>
         </Control>
@@ -222,7 +175,7 @@
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="210"/>
+          <Property Name="Top" Value="249"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_5_1]"/>
           <Property Name="Width" Value="70"/>
         </Control>
@@ -298,22 +251,243 @@
           <Property Name="Description" Value=""/>
           <Property Name="EmbVirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_102]"/>
           <Property Name="ForeColor" Value="0"/>
-          <Property Name="Height" Value="50"/>
+          <Property Name="Height" Value="45"/>
           <Property Name="KeyMatrixOffset" Value="None"/>
-          <Property Name="Left" Value="260"/>
+          <Property Name="Left" Value="515"/>
           <Property Name="Multiline" Value="Automatic"/>
           <Property Name="PressedBitmapSource" Value="Source[embedded].Property[BitmapSource]"/>
           <Property Name="PressedBorder" Value="Source[local].Border[Mp_Button_pressed]"/>
           <Property Name="PressedTextSource" Value="Source[embedded].Property[TextSource]"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[ControlButton]"/>
-          <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLBasicUIText]"/>
-          <Property Name="TextIndex" Value="3"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndex" Value="17"/>
           <Property Name="TextIndexDatapoint" Value="None"/>
           <Property Name="TextSimulationValue" Value="0"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="430"/>
+          <Property Name="Top" Value="83"/>
           <Property Name="VirtualKey" Value="Source[local].VirtualKey[%embVirtualKey_102]"/>
-          <Property Name="Width" Value="120"/>
+          <Property Name="Width" Value="108"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_1">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_BitmapFrame]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[MpHeader]"/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="464"/>
+          <Property Name="Multiline" Value="Automatic"/>
+          <Property Name="SimulationIndex" Value="0"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpBubbleText]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="19"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="391"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_2">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_BitmapFrame]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[MpHeader]"/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="363"/>
+          <Property Name="Multiline" Value="Automatic"/>
+          <Property Name="SimulationIndex" Value="0"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpBubbleText]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="20"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="391"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_3">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_BitmapFrame]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[MpHeader]"/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="264"/>
+          <Property Name="Multiline" Value="Automatic"/>
+          <Property Name="SimulationIndex" Value="0"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpBubbleText]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="21"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="391"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_4">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_BitmapFrame]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[MpHeader]"/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="165"/>
+          <Property Name="Multiline" Value="Automatic"/>
+          <Property Name="SimulationIndex" Value="0"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpBubbleText]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="22"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="391"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_5">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_BitmapFrame]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[MpHeader]"/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="66"/>
+          <Property Name="Multiline" Value="Automatic"/>
+          <Property Name="SimulationIndex" Value="0"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpBubbleText]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="23"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="391"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001007" Name="Numeric_1">
+          <Property Name="BackColor" Value="250"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_Flat_grey]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="66"/>
+          <Property Name="MaxDatapoint" Value="None"/>
+          <Property Name="MaxValue" Value="None"/>
+          <Property Name="MinDatapoint" Value="None"/>
+          <Property Name="MinValue" Value="None"/>
+          <Property Name="SimulationValue" Value="0"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpDefault]"/>
+          <Property Name="TeachDatapoint" Value="None"/>
+          <Property Name="Top" Value="430"/>
+          <Property Name="ValueDatapoint" Value="None"/>
+          <Property Name="ValueMode" Value="Standard"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001007" Name="Numeric_2">
+          <Property Name="BackColor" Value="250"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_Flat_grey]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="165"/>
+          <Property Name="MaxDatapoint" Value="None"/>
+          <Property Name="MaxValue" Value="None"/>
+          <Property Name="MinDatapoint" Value="None"/>
+          <Property Name="MinValue" Value="None"/>
+          <Property Name="SimulationValue" Value="0"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpDefault]"/>
+          <Property Name="TeachDatapoint" Value="None"/>
+          <Property Name="Top" Value="430"/>
+          <Property Name="ValueDatapoint" Value="None"/>
+          <Property Name="ValueMode" Value="Standard"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001007" Name="Numeric_3">
+          <Property Name="BackColor" Value="250"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_Flat_grey]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="264"/>
+          <Property Name="MaxDatapoint" Value="None"/>
+          <Property Name="MaxValue" Value="None"/>
+          <Property Name="MinDatapoint" Value="None"/>
+          <Property Name="MinValue" Value="None"/>
+          <Property Name="SimulationValue" Value="0"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpDefault]"/>
+          <Property Name="TeachDatapoint" Value="None"/>
+          <Property Name="Top" Value="430"/>
+          <Property Name="ValueDatapoint" Value="None"/>
+          <Property Name="ValueMode" Value="Standard"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001007" Name="Numeric_4">
+          <Property Name="BackColor" Value="250"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_Flat_grey]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="363"/>
+          <Property Name="MaxDatapoint" Value="None"/>
+          <Property Name="MaxValue" Value="None"/>
+          <Property Name="MinDatapoint" Value="None"/>
+          <Property Name="MinValue" Value="None"/>
+          <Property Name="SimulationValue" Value="0"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpDefault]"/>
+          <Property Name="TeachDatapoint" Value="None"/>
+          <Property Name="Top" Value="430"/>
+          <Property Name="ValueDatapoint" Value="None"/>
+          <Property Name="ValueMode" Value="Standard"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001007" Name="Numeric_5">
+          <Property Name="BackColor" Value="250"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_Flat_grey]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="464"/>
+          <Property Name="MaxDatapoint" Value="None"/>
+          <Property Name="MaxValue" Value="None"/>
+          <Property Name="MinDatapoint" Value="None"/>
+          <Property Name="MinValue" Value="None"/>
+          <Property Name="SimulationValue" Value="0"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpDefault]"/>
+          <Property Name="TeachDatapoint" Value="None"/>
+          <Property Name="Top" Value="430"/>
+          <Property Name="ValueDatapoint" Value="None"/>
+          <Property Name="ValueMode" Value="Standard"/>
+          <Property Name="Width" Value="92"/>
+        </Control>
+        <Control ClassId="0x00001004" Name="Text_6">
+          <Property Name="AlignmentHorizontal" Value="Center"/>
+          <Property Name="Border" Value="Source[local].Border[Mp_BitmapFrame]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Font" Value="Source[local].Font[MpHeader]"/>
+          <Property Name="Height" Value="40"/>
+          <Property Name="Left" Value="514"/>
+          <Property Name="Multiline" Value="Automatic"/>
+          <Property Name="SimulationIndex" Value="0"/>
+          <Property Name="SimulationValue" Value=""/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpBubbleText]"/>
+          <Property Name="TextGroup" Value="Source[embedded].TextGroup"/>
+          <Property Name="TextIndexOffset" Value="24"/>
+          <Property Name="TextSource" Value="SingleText"/>
+          <Property Name="Top" Value="304"/>
+          <Property Name="Width" Value="110"/>
+        </Control>
+        <Control ClassId="0x00001007" Name="Numeric_6">
+          <Property Name="Border" Value="Source[local].Border[Mp_InputBorder]"/>
+          <Property Name="ControlID" Value="0"/>
+          <Property Name="Description" Value=""/>
+          <Property Name="Height" Value="30"/>
+          <Property Name="Left" Value="514"/>
+          <Property Name="MaxDatapoint" Value="None"/>
+          <Property Name="MaxValue" Value="None"/>
+          <Property Name="MinDatapoint" Value="None"/>
+          <Property Name="MinValue" Value="None"/>
+          <Property Name="SimulationValue" Value="0"/>
+          <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Input]"/>
+          <Property Name="TeachDatapoint" Value="None"/>
+          <Property Name="Top" Value="344"/>
+          <Property Name="ValueDatapoint" Value="None"/>
+          <Property Name="ValueMode" Value="Standard"/>
+          <Property Name="Width" Value="110"/>
         </Control>
       </Controls>
       <KeyMapping>
@@ -359,21 +533,6 @@
               <Property Name="Name" Value="Action_0"/>
               <Property Name="SetValue" Value="1"/>
               <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Source.Visualization.VisCtrl.MpPackMLBasicUIConnect.StateControl.Start]"/>
-            </KeyAction>
-          </KeyActions>
-        </VirtualKey>
-        <VirtualKey Name="%embVirtualKey_12_1">
-          <Property Name="Description" Value=""/>
-          <Property Name="VirtualKey_LED" Value="False"/>
-          <KeyActions>
-            <KeyAction ClassId="0x00000161">
-              <Property Name="CompletionDatapoint" Value="None"/>
-              <Property Name="CompletionValue" Value="0"/>
-              <Property Name="Description" Value=""/>
-              <Property Name="Locking" Value="Never"/>
-              <Property Name="Name" Value="Action_0"/>
-              <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.Source.Visualization.VisCtrl.MpPackMLBasicUIConnect.ModeControl.Activate]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>
@@ -1000,7 +1159,7 @@
           <Property Name="Height" Value="300"/>
           <Property Name="Left" Value="0"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[MpDefault]"/>
-          <Property Name="Top" Value="109"/>
+          <Property Name="Top" Value="83"/>
           <Property Name="Width" Value="496"/>
         </Control>
         <Control ClassId="0x00001001" Name="shpAbortFrame_1">
@@ -1010,7 +1169,7 @@
           <Property Name="Height" Value="264"/>
           <Property Name="Left" Value="13"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="126"/>
+          <Property Name="Top" Value="100"/>
           <Property Name="Width" Value="279"/>
         </Control>
         <Control ClassId="0x00001001" Name="shpAbortFrame_2">
@@ -1020,7 +1179,7 @@
           <Property Name="Height" Value="190"/>
           <Property Name="Left" Value="291"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="126"/>
+          <Property Name="Top" Value="100"/>
           <Property Name="Width" Value="189"/>
         </Control>
         <Control ClassId="0x00001001" Name="shpStopFrame">
@@ -1030,7 +1189,7 @@
           <Property Name="Height" Value="173"/>
           <Property Name="Left" Value="19"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="133"/>
+          <Property Name="Top" Value="107"/>
           <Property Name="Width" Value="455"/>
         </Control>
         <Control ClassId="0x00001001" Name="shpAbortFrame_3">
@@ -1041,7 +1200,7 @@
           <Property Name="Height" Value="9"/>
           <Property Name="Left" Value="288"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="306"/>
+          <Property Name="Top" Value="280"/>
           <Property Name="Width" Value="31"/>
         </Control>
         <Control ClassId="0x00001001" Name="shpAbortFrame_4">
@@ -1052,106 +1211,106 @@
           <Property Name="Height" Value="6"/>
           <Property Name="Left" Value="260"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="127"/>
+          <Property Name="Top" Value="101"/>
           <Property Name="Width" Value="31"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_1">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="120"/>
-          <Property Name="EndY" Value="215"/>
+          <Property Name="EndY" Value="189"/>
           <Property Name="StartX" Value="92"/>
-          <Property Name="StartY" Value="215"/>
+          <Property Name="StartY" Value="189"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_2">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="211"/>
-          <Property Name="EndY" Value="269"/>
+          <Property Name="EndY" Value="243"/>
           <Property Name="StartX" Value="195"/>
-          <Property Name="StartY" Value="269"/>
+          <Property Name="StartY" Value="243"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_3">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="299"/>
-          <Property Name="EndY" Value="269"/>
+          <Property Name="EndY" Value="243"/>
           <Property Name="StartX" Value="283"/>
-          <Property Name="StartY" Value="269"/>
+          <Property Name="StartY" Value="243"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_4">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="210"/>
-          <Property Name="EndY" Value="215"/>
+          <Property Name="EndY" Value="189"/>
           <Property Name="StartX" Value="194"/>
-          <Property Name="StartY" Value="215"/>
+          <Property Name="StartY" Value="189"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_5">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="297"/>
-          <Property Name="EndY" Value="215"/>
+          <Property Name="EndY" Value="189"/>
           <Property Name="StartX" Value="281"/>
-          <Property Name="StartY" Value="215"/>
+          <Property Name="StartY" Value="189"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_6">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="389"/>
-          <Property Name="EndY" Value="215"/>
+          <Property Name="EndY" Value="189"/>
           <Property Name="StartX" Value="373"/>
-          <Property Name="StartY" Value="215"/>
+          <Property Name="StartY" Value="189"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_7">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="299"/>
-          <Property Name="EndY" Value="161"/>
+          <Property Name="EndY" Value="135"/>
           <Property Name="StartX" Value="283"/>
-          <Property Name="StartY" Value="161"/>
+          <Property Name="StartY" Value="135"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_8">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="211"/>
-          <Property Name="EndY" Value="161"/>
+          <Property Name="EndY" Value="135"/>
           <Property Name="StartX" Value="195"/>
-          <Property Name="StartY" Value="161"/>
+          <Property Name="StartY" Value="135"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_9">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="298"/>
-          <Property Name="EndY" Value="344"/>
+          <Property Name="EndY" Value="318"/>
           <Property Name="StartX" Value="282"/>
-          <Property Name="StartY" Value="344"/>
+          <Property Name="StartY" Value="318"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_10">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="391"/>
-          <Property Name="EndY" Value="344"/>
+          <Property Name="EndY" Value="318"/>
           <Property Name="StartX" Value="375"/>
-          <Property Name="StartY" Value="344"/>
+          <Property Name="StartY" Value="318"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_11">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="126"/>
-          <Property Name="EndY" Value="344"/>
+          <Property Name="EndY" Value="318"/>
           <Property Name="StartX" Value="74"/>
-          <Property Name="StartY" Value="344"/>
+          <Property Name="StartY" Value="318"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateStarting">
@@ -1174,7 +1333,7 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="3"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="196"/>
+          <Property Name="Top" Value="170"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateCompleting">
@@ -1190,15 +1349,16 @@
           <Property Name="FillStyle" Value="Opaque"/>
           <Property Name="Height" Value="40"/>
           <Property Name="HighlightingBackColor" Value="100"/>
-          <Property Name="Left" Value="296"/>
+          <Property Name="Left" Value="295"/>
+          <Property Name="Multiline" Value="Automatic"/>
           <Property Name="SimulationIndex" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="16"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="196"/>
-          <Property Name="Width" Value="80"/>
+          <Property Name="Top" Value="170"/>
+          <Property Name="Width" Value="90"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateHeld">
           <Property Name="AlignmentHorizontal" Value="Center"/>
@@ -1220,7 +1380,7 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="11"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="142"/>
+          <Property Name="Top" Value="116"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateSuspended">
@@ -1243,7 +1403,7 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="5"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="250"/>
+          <Property Name="Top" Value="224"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateAborted">
@@ -1266,61 +1426,61 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="9"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="325"/>
+          <Property Name="Top" Value="299"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_13">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="335"/>
-          <Property Name="EndY" Value="244"/>
+          <Property Name="EndY" Value="218"/>
           <Property Name="StartX" Value="267"/>
-          <Property Name="StartY" Value="244"/>
+          <Property Name="StartY" Value="218"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_14">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="335"/>
-          <Property Name="EndY" Value="251"/>
+          <Property Name="EndY" Value="225"/>
           <Property Name="StartX" Value="335"/>
-          <Property Name="StartY" Value="244"/>
+          <Property Name="StartY" Value="218"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_15">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="155"/>
-          <Property Name="EndY" Value="187"/>
+          <Property Name="EndY" Value="161"/>
           <Property Name="StartX" Value="155"/>
-          <Property Name="StartY" Value="180"/>
+          <Property Name="StartY" Value="154"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_16">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="226"/>
-          <Property Name="EndY" Value="188"/>
+          <Property Name="EndY" Value="162"/>
           <Property Name="StartX" Value="155"/>
-          <Property Name="StartY" Value="188"/>
+          <Property Name="StartY" Value="162"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_17">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="226"/>
-          <Property Name="EndY" Value="244"/>
+          <Property Name="EndY" Value="218"/>
           <Property Name="StartX" Value="226"/>
-          <Property Name="StartY" Value="188"/>
+          <Property Name="StartY" Value="162"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_19">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="65"/>
-          <Property Name="EndY" Value="230"/>
+          <Property Name="EndY" Value="204"/>
           <Property Name="StartX" Value="65"/>
-          <Property Name="StartY" Value="253"/>
+          <Property Name="StartY" Value="227"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateIdle">
@@ -1337,14 +1497,15 @@
           <Property Name="Height" Value="40"/>
           <Property Name="HighlightingBackColor" Value="34"/>
           <Property Name="Left" Value="26"/>
+          <Property Name="Multiline" Value="Automatic"/>
           <Property Name="SimulationIndex" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="4"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="196"/>
-          <Property Name="Width" Value="80"/>
+          <Property Name="Top" Value="170"/>
+          <Property Name="Width" Value="84"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateResetting">
           <Property Name="AlignmentHorizontal" Value="Center"/>
@@ -1366,16 +1527,16 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="15"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="250"/>
+          <Property Name="Top" Value="224"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_20">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="65"/>
-          <Property Name="EndY" Value="290"/>
+          <Property Name="EndY" Value="264"/>
           <Property Name="StartX" Value="65"/>
-          <Property Name="StartY" Value="349"/>
+          <Property Name="StartY" Value="323"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateStopped">
@@ -1398,25 +1559,25 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="2"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="325"/>
+          <Property Name="Top" Value="299"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_21">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="226"/>
-          <Property Name="EndY" Value="244"/>
+          <Property Name="EndY" Value="218"/>
           <Property Name="StartX" Value="155"/>
-          <Property Name="StartY" Value="244"/>
+          <Property Name="StartY" Value="218"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_22">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="155"/>
-          <Property Name="EndY" Value="251"/>
+          <Property Name="EndY" Value="225"/>
           <Property Name="StartX" Value="155"/>
-          <Property Name="StartY" Value="244"/>
+          <Property Name="StartY" Value="218"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateUnholding">
@@ -1433,13 +1594,14 @@
           <Property Name="Height" Value="40"/>
           <Property Name="HighlightingBackColor" Value="100"/>
           <Property Name="Left" Value="116"/>
+          <Property Name="Multiline" Value="Automatic"/>
           <Property Name="SimulationIndex" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="12"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="142"/>
+          <Property Name="Top" Value="116"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateUnsuspending">
@@ -1463,7 +1625,7 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="14"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="250"/>
+          <Property Name="Top" Value="224"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateSuspending">
@@ -1480,40 +1642,41 @@
           <Property Name="Height" Value="40"/>
           <Property Name="HighlightingBackColor" Value="100"/>
           <Property Name="Left" Value="296"/>
+          <Property Name="Multiline" Value="Automatic"/>
           <Property Name="SimulationIndex" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="13"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="250"/>
-          <Property Name="Width" Value="80"/>
+          <Property Name="Top" Value="224"/>
+          <Property Name="Width" Value="95"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_23">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="335"/>
-          <Property Name="EndY" Value="187"/>
+          <Property Name="EndY" Value="161"/>
           <Property Name="StartX" Value="335"/>
-          <Property Name="StartY" Value="180"/>
+          <Property Name="StartY" Value="154"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_24">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="335"/>
-          <Property Name="EndY" Value="188"/>
+          <Property Name="EndY" Value="162"/>
           <Property Name="StartX" Value="267"/>
-          <Property Name="StartY" Value="188"/>
+          <Property Name="StartY" Value="162"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_25">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="266"/>
-          <Property Name="EndY" Value="244"/>
+          <Property Name="EndY" Value="218"/>
           <Property Name="StartX" Value="266"/>
-          <Property Name="StartY" Value="188"/>
+          <Property Name="StartY" Value="162"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateHolding">
@@ -1536,25 +1699,25 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="10"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="142"/>
+          <Property Name="Top" Value="116"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_26">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="425"/>
-          <Property Name="EndY" Value="298"/>
+          <Property Name="EndY" Value="272"/>
           <Property Name="StartX" Value="65"/>
-          <Property Name="StartY" Value="298"/>
+          <Property Name="StartY" Value="272"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_27">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="425"/>
-          <Property Name="EndY" Value="226"/>
+          <Property Name="EndY" Value="200"/>
           <Property Name="StartX" Value="425"/>
-          <Property Name="StartY" Value="297"/>
+          <Property Name="StartY" Value="271"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateComplete">
@@ -1570,50 +1733,50 @@
           <Property Name="FillStyle" Value="Opaque"/>
           <Property Name="Height" Value="40"/>
           <Property Name="HighlightingBackColor" Value="34"/>
-          <Property Name="Left" Value="386"/>
+          <Property Name="Left" Value="392"/>
           <Property Name="SimulationIndex" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="17"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="196"/>
+          <Property Name="Top" Value="170"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_28">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="111"/>
-          <Property Name="EndY" Value="373"/>
+          <Property Name="EndY" Value="347"/>
           <Property Name="StartX" Value="111"/>
-          <Property Name="StartY" Value="344"/>
+          <Property Name="StartY" Value="318"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_29">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="200"/>
-          <Property Name="EndY" Value="373"/>
+          <Property Name="EndY" Value="347"/>
           <Property Name="StartX" Value="111"/>
-          <Property Name="StartY" Value="373"/>
+          <Property Name="StartY" Value="347"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_30">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="200"/>
-          <Property Name="EndY" Value="373"/>
+          <Property Name="EndY" Value="347"/>
           <Property Name="StartX" Value="200"/>
-          <Property Name="StartY" Value="344"/>
+          <Property Name="StartY" Value="318"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_31">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="217"/>
-          <Property Name="EndY" Value="344"/>
+          <Property Name="EndY" Value="318"/>
           <Property Name="StartX" Value="201"/>
-          <Property Name="StartY" Value="344"/>
+          <Property Name="StartY" Value="318"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateClearing">
@@ -1636,27 +1799,27 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="1"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="325"/>
+          <Property Name="Top" Value="299"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_32">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="155"/>
-          <Property Name="EndY" Value="338"/>
+          <Property Name="EndY" Value="312"/>
           <Property Name="LineWidth" Value="2"/>
           <Property Name="StartX" Value="155"/>
-          <Property Name="StartY" Value="305"/>
+          <Property Name="StartY" Value="279"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x0000100D" Name="Line_33">
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="EndX" Value="425"/>
-          <Property Name="EndY" Value="347"/>
+          <Property Name="EndY" Value="321"/>
           <Property Name="LineWidth" Value="3"/>
           <Property Name="StartX" Value="425"/>
-          <Property Name="StartY" Value="314"/>
+          <Property Name="StartY" Value="288"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateAborting">
@@ -1679,7 +1842,7 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="8"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="325"/>
+          <Property Name="Top" Value="299"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateStopping">
@@ -1702,7 +1865,7 @@
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="7"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="325"/>
+          <Property Name="Top" Value="299"/>
           <Property Name="Width" Value="80"/>
         </Control>
         <Control ClassId="0x00001001" Name="shpAbortFrame_5">
@@ -1713,7 +1876,7 @@
           <Property Name="Height" Value="6"/>
           <Property Name="Left" Value="277"/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
-          <Property Name="Top" Value="127"/>
+          <Property Name="Top" Value="101"/>
           <Property Name="Width" Value="31"/>
         </Control>
         <Control ClassId="0x00001004" Name="txtStateExecute">
@@ -1730,14 +1893,15 @@
           <Property Name="Height" Value="40"/>
           <Property Name="HighlightingBackColor" Value="197"/>
           <Property Name="Left" Value="206"/>
+          <Property Name="Multiline" Value="Automatic"/>
           <Property Name="SimulationIndex" Value="0"/>
           <Property Name="SimulationValue" Value=""/>
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
           <Property Name="TextGroup" Value="Source[global].TextGroup[MpPackMLStateNames]"/>
           <Property Name="TextIndexOffset" Value="6"/>
           <Property Name="TextSource" Value="SingleText"/>
-          <Property Name="Top" Value="196"/>
-          <Property Name="Width" Value="80"/>
+          <Property Name="Top" Value="170"/>
+          <Property Name="Width" Value="84"/>
         </Control>
       </Controls>
       <KeyMapping/>
@@ -1757,15 +1921,20 @@
     </LayerRef>
   </Layers>
   <MovementOrder>
-    <MovementEntry Control="Source[embedded].Layer[Default].Control[drpModeSelect]">
-      <Property Name="Down" Value="Source[embedded].Layer[Default].Control[drpModeSelect]"/>
-      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[drpModeSelect]"/>
-      <Property Name="Right" Value="Source[embedded].Layer[Default].Control[drpModeSelect]"/>
-      <Property Name="Up" Value="Source[embedded].Layer[Default].Control[drpModeSelect]"/>
+    <MovementEntry Control="Source[embedded].Layer[Default].Control[Numeric_6]">
+      <Property Name="Down" Value="Source[embedded].Layer[Default].Control[Numeric_6]"/>
+      <Property Name="Left" Value="Source[embedded].Layer[Default].Control[Numeric_6]"/>
+      <Property Name="Right" Value="Source[embedded].Layer[Default].Control[Numeric_6]"/>
+      <Property Name="Up" Value="Source[embedded].Layer[Default].Control[Numeric_6]"/>
     </MovementEntry>
   </MovementOrder>
   <TabSequence>
-    <TabSeqItem Index="0" Value="Source[embedded].Layer[Default].Control[drpModeSelect]"/>
-    <TabSeqItem Index="1" Value="Source[local].Layer[MpBackground].Control[strUserName]"/>
+    <TabSeqItem Index="0" Value="Source[local].Layer[MpBackground].Control[strUserName]"/>
+    <TabSeqItem Index="1" Value="Source[embedded].Layer[Default].Control[Numeric_5]"/>
+    <TabSeqItem Index="2" Value="Source[embedded].Layer[Default].Control[Numeric_1]"/>
+    <TabSeqItem Index="3" Value="Source[embedded].Layer[Default].Control[Numeric_4]"/>
+    <TabSeqItem Index="4" Value="Source[embedded].Layer[Default].Control[Numeric_2]"/>
+    <TabSeqItem Index="5" Value="Source[embedded].Layer[Default].Control[Numeric_6]"/>
+    <TabSeqItem Index="6" Value="Source[embedded].Layer[Default].Control[Numeric_3]"/>
   </TabSequence>
 </Page>

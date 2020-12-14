@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.6.3.55 SP?>
+<?AutomationStudio Version=4.8.2.72?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1" />
   <TaskClass Name="Cyclic#2">
-    <Task Name="MainLogicF" Source="Source.MachineSimulation.MainLogicFBD.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="MainLogic" Source="Source.MachineSimulation.MainLogic.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="OEECalc" Source="Source.MachineSimulation.OEECalc.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#3">
