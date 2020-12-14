@@ -1,0 +1,4 @@
+VAR
+	MpOeeCore_Simulador : MpOeeCore;
+	OeeParam : MpOeeCoreParType;
+END_VAR

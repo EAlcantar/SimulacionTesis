@@ -1,0 +1,18 @@
+VAR
+	mpPackMLCore_Simulador : MpPackMLCore;
+	mpPackMLMode_Simulador : MpPackMLMode;
+	OldStateComplete : BOOL;
+	DTStructureGetTime_0 : DTStructureGetTime;
+	sysTime : DTStructure;
+	random : REAL;
+	tiempoCiclo : REAL;
+	RTInfo_0 : RTInfo;
+	cuentaTiempo : REAL;
+	banderaRandomRechazada : SINT;
+	TON_rechazada : TON;
+	banderaRandomRechazada_Milisec : UINT;
+	rejected : SINT;
+END_VAR
+VAR CONSTANT
+	MS_FACTOR : UINT := 1000;
+END_VAR

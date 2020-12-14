@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.6.3.55 SP?>
+<Library Version="5.07.1" SubType="Binary" Description="OMAC PackML" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>MpPackML.typ</File>
+    <File>MpPackMLError.typ</File>
+    <File>MpPackMLAlarm.typ</File>
+    <File>MpPackML.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="MpBase" FromVersion="5.07.0" ToVersion="5.07.9" />
+    <Dependency ObjectName="astime" />
+  </Dependencies>
+</Library>

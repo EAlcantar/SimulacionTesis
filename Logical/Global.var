@@ -1,0 +1,5 @@
+VAR
+	piezasProducidasTotales : DINT;
+	piezasProducidas : DINT;
+	piezasRechazadas : DINT;
+END_VAR

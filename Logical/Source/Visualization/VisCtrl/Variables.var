@@ -1,0 +1,14 @@
+VAR
+	MpPackMLBasicUIConnect : MpPackMLBasicUIConnectType;
+	MpPackMLBasicUI_Simulador : MpPackMLBasicUI;
+	MpPackMLStatisticsUIConnect : MpPackMLStatisticsUIConnectType;
+	MpPackMLStatisticsUI_0 : MpPackMLStatisticsUI;
+	MpOeeCoreUI_Simulador : MpOeeCoreUI;
+	MpOeeCoreUIConnect : MpOeeCoreUIConnectType;
+	MpOeeListUI_Simulador : MpOeeListUI;
+	MpOeeListUIConnect : MpOeeListUIConnectType;
+	MpOeeTimelineUI_Simulador : MpOeeTimelineUI;
+	MpOeeTimelineUIConnect : MpOeeTimelineUIConnectType;
+	MpOeeTrendUI_Simulador : MpOeeTrendUI;
+	MpOeeTrendUIConnect : MpOeeTrendUIConnectType;
+END_VAR

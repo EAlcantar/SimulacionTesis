@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.6.3.55 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">MainLogic</Object>
+    <Object Type="Program" Language="IEC">MainLogicFBD</Object>
+    <Object Type="Program" Language="IEC">Program3</Object>
+    <Object Type="Program" Language="IEC">OEECalc</Object>
+  </Objects>
+</Package>
