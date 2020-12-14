@@ -12,7 +12,14 @@ VAR
 	TON_rechazada : TON;
 	banderaRandomRechazada_Milisec : UINT;
 	rejected : SINT;
+	TON_Idle_PopUp : {REDUND_UNREPLICABLE} TON;
+	tiempoOcioso : UDINT;
+	idlePopUpStatus : USINT;
 END_VAR
+(*CONSTANTES DEL SISTEMA*)
 VAR CONSTANT
+	SHOW : USINT := 0;
+	HIDE : USINT := 1;
 	MS_FACTOR : UINT := 1000;
+	POP_UP_TIMER : TIME := T#300S;
 END_VAR

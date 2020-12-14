@@ -10,6 +10,9 @@ PROGRAM _INIT
 	RTInfo_0(enable := TRUE);
 	
 	tiempoCiclo := 5;
+	
+	//Escondiendo el pop up
+	openPopUp := HIDE;
 	 
 END_PROGRAM
 
@@ -21,9 +24,22 @@ PROGRAM _CYCLIC
 		
 		mpPACKML_STATE_UNDEFINED:
 			
-			mpPackMLMode_Simulador.Activate := TRUE;			
+			mpPackMLMode_Simulador.Activate := TRUE;	
+			
+		mpPACKML_STATE_IDLE:
+			
+			TON_Idle_PopUp(IN := TRUE , PT := POP_UP_TIMER);
+			
+			IF TON_Idle_PopUp.Q THEN
+				
+				idlePopUpStatus := SHOW;				
+				tiempoOcioso 	:= tiempoOcioso + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);				
+			END_IF;
 		
 		mpPACKML_STATE_STARTING:
+			
+			//Reset del temporizador para el pop up
+			TON_Idle_PopUp(IN := FALSE);
 			
 			mpPackMLMode_Simulador.Start 		 := FALSE;
 			mpPackMLMode_Simulador.StateComplete := TRUE;
