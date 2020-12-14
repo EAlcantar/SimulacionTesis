@@ -8,13 +8,27 @@ VAR
 	tiempoCiclo : REAL;
 	RTInfo_0 : RTInfo;
 	cuentaTiempo : REAL;
-	banderaRandomRechazada : SINT;
-	TON_rechazada : TON;
-	banderaRandomRechazada_Milisec : UINT;
 	rejected : SINT;
-	TON_Idle_PopUp : {REDUND_UNREPLICABLE} TON;
-	tiempoOcioso : UDINT;
 	idlePopUpStatus : USINT;
+END_VAR
+(*BANDERAS DEL SISTEMA*)
+VAR
+	banderaRandomRechazada : SINT;
+	banderaRandomRechazada_Milisec : UINT;
+	aceptarTiempoRetrabajo : BOOL;
+	aceptarTiempoMantto : BOOL;
+END_VAR
+(*TEMPORIZADORES DEL SISTEMA*)
+VAR
+	TON_rechazada : TON;
+	TON_Idle_PopUp : {REDUND_UNREPLICABLE} TON;
+	TON_Idle_TimeDelay : TON;
+END_VAR
+(*ACUMULADORES DE TIEMPO DE PARO*)
+VAR
+	tiempoOcioso : REAL;
+	tiempoRetrabajo : REAL;
+	tiempoMantto : REAL;
 END_VAR
 (*CONSTANTES DEL SISTEMA*)
 VAR CONSTANT
@@ -22,4 +36,5 @@ VAR CONSTANT
 	HIDE : USINT := 1;
 	MS_FACTOR : UINT := 1000;
 	POP_UP_TIMER : TIME := T#300S;
+	IDLE_DELAY_TIME : TIME := T#20S;
 END_VAR

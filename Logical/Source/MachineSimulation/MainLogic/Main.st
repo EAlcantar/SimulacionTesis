@@ -12,7 +12,7 @@ PROGRAM _INIT
 	tiempoCiclo := 5;
 	
 	//Escondiendo el pop up
-	openPopUp := HIDE;
+	idlePopUpStatus := HIDE;
 	 
 END_PROGRAM
 
@@ -28,18 +28,13 @@ PROGRAM _CYCLIC
 			
 		mpPACKML_STATE_IDLE:
 			
-			TON_Idle_PopUp(IN := TRUE , PT := POP_UP_TIMER);
-			
-			IF TON_Idle_PopUp.Q THEN
-				
-				idlePopUpStatus := SHOW;				
-				tiempoOcioso 	:= tiempoOcioso + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);				
-			END_IF;
+			//Llamando a la acción para aparecer al pop up de paro
+			IdlePopUpWindow;
 		
 		mpPACKML_STATE_STARTING:
 			
-			//Reset del temporizador para el pop up
-			TON_Idle_PopUp(IN := FALSE);
+			//Limpiando los datos del pop up de paro
+			CleanPopUpData;
 			
 			mpPackMLMode_Simulador.Start 		 := FALSE;
 			mpPackMLMode_Simulador.StateComplete := TRUE;
@@ -79,8 +74,16 @@ PROGRAM _CYCLIC
 			cuentaTiempo 						 := 0; 
 			mpPackMLMode_Simulador.Stop			 := FALSE;
 			mpPackMLMode_Simulador.StateComplete := TRUE;
+			
+		mpPACKML_STATE_STOPPED:
+			
+			//Llamando a la acción para aparecer al pop up de paro
+			IdlePopUpWindow;
 							
 		mpPACKML_STATE_RESETTING:
+			
+			//Limpiando los datos del pop up de paro
+			CleanPopUpData;
 			
 			mpPackMLMode_Simulador.Reset		 := FALSE;
 			mpPackMLMode_Simulador.StateComplete := TRUE;
