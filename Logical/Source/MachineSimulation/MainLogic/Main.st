@@ -11,8 +11,10 @@ PROGRAM _INIT
 	
 	tiempoCiclo := 5;
 	
-	//Escondiendo el pop up
-	idlePopUpStatus := HIDE;
+	//Escondiendo los pop up's
+	idlePopUpStatus 			 := HIDE;
+	maintenancePopUpStatus	     := HIDE;
+	maintenanceTimeBalloonStatus := HIDE;	
 	 
 END_PROGRAM
 
@@ -41,7 +43,9 @@ PROGRAM _CYCLIC
 		
 		mpPACKML_STATE_EXECUTE:
 			
-			cuentaTiempo := cuentaTiempo + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
+			(* Acumuladores de tiempo *)
+			tiempoEnProduccion := tiempoEnProduccion + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000); 
+			cuentaTiempo 	   := cuentaTiempo + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
 			
 			IF cuentaTiempo >= tiempoCiclo THEN
 				
@@ -114,6 +118,17 @@ PROGRAM _CYCLIC
 		mpPackMLMode_Simulador.StateComplete := FALSE;
 	END_IF;
 	OldStateComplete := mpPackMLMode_Simulador.StateComplete;
+	
+	(* VISU CONTROL *)
+	IF openMaintenanceTimeDetails THEN
+		
+		maintenanceTimeBalloonStatus := SHOW;
+		
+	ELSE
+		
+		maintenanceTimeBalloonStatus := HIDE;
+		
+	END_IF;
 		 
 END_PROGRAM
 

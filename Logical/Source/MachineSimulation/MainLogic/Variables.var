@@ -10,6 +10,8 @@ VAR
 	cuentaTiempo : REAL;
 	rejected : SINT;
 	idlePopUpStatus : USINT;
+	maintenanceTimeBalloonStatus : USINT;
+	maintenancePopUpStatus : USINT;
 END_VAR
 (*BANDERAS DEL SISTEMA*)
 VAR
@@ -17,18 +19,25 @@ VAR
 	banderaRandomRechazada_Milisec : UINT;
 	aceptarTiempoRetrabajo : BOOL;
 	aceptarTiempoMantto : BOOL;
+	aceptarManttoPredict : BOOL;
+	aceptarManttoAutonomo : BOOL;
+	openMaintenanceTimeDetails : BOOL;
 END_VAR
 (*TEMPORIZADORES DEL SISTEMA*)
 VAR
 	TON_rechazada : TON;
 	TON_Idle_PopUp : {REDUND_UNREPLICABLE} TON;
 	TON_Idle_TimeDelay : TON;
+	TON_Mantto_TimeDelay : TON;
 END_VAR
-(*ACUMULADORES DE TIEMPO DE PARO*)
+(*ACUMULADORES DE TIEMPO *)
 VAR
 	tiempoOcioso : REAL;
 	tiempoRetrabajo : REAL;
-	tiempoMantto : REAL;
+	tiempoManttoTotal : REAL;
+	tiempoManttoPredict : REAL;
+	tiempoManttoAutonomo : REAL;
+	tiempoEnProduccion : REAL;
 END_VAR
 (*CONSTANTES DEL SISTEMA*)
 VAR CONSTANT
@@ -37,4 +46,8 @@ VAR CONSTANT
 	MS_FACTOR : UINT := 1000;
 	POP_UP_TIMER : TIME := T#300S;
 	IDLE_DELAY_TIME : TIME := T#20S;
+END_VAR
+VAR
+	manttoPredictSelected : BOOL;
+	manttoAutonomoSelected : BOOL;
 END_VAR

@@ -16,10 +16,31 @@ ACTION IdlePopUpWindow:
 			idlePopUpStatus := HIDE;
 			//PARO POR MANTENIMIENTO PROGRAMADO
 		ELSIF aceptarTiempoMantto THEN
-					
+			
 			TON_Idle_TimeDelay(IN := FALSE);
-			tiempoMantto 	:= tiempoMantto + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
-			idlePopUpStatus := HIDE;
+			TON_Mantto_TimeDelay(IN := TRUE , PT := IDLE_DELAY_TIME); //Comienza el retardo de cierre del pop-up
+
+			idlePopUpStatus        := HIDE;
+			maintenancePopUpStatus := SHOW;
+			
+			IF manttoPredictSelected THEN
+				
+				TON_Mantto_TimeDelay(IN := FALSE);
+				tiempoManttoPredict    := tiempoManttoPredict + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
+				maintenancePopUpStatus := HIDE;
+				
+			ELSIF manttoAutonomoSelected THEN
+				
+				TON_Mantto_TimeDelay(IN := FALSE);
+				tiempoManttoAutonomo   := tiempoManttoAutonomo + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
+				maintenancePopUpStatus := HIDE;
+				
+			ELSIF TON_Mantto_TimeDelay.Q THEN	
+				tiempoOcioso 	:= tiempoOcioso + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
+			END_IF;
+			
+			tiempoManttoTotal 	:= tiempoManttoAutonomo + tiempoManttoPredict;
+			
 			//PARO DE TIEMPO OCIOSO
 		ELSIF TON_Idle_TimeDelay.Q THEN	
 			tiempoOcioso 	:= tiempoOcioso + (UDINT_TO_REAL(RTInfo_0.cycle_time)/1000000);
