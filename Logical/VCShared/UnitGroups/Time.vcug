@@ -3,7 +3,7 @@
 <UnitGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="Time">
   <Property Name="DefaultDisplayUnit" Value="Source[embedded].Unit[Minutos]"/>
   <Property Name="DefaultLimit" Value="None"/>
-  <Property Name="DefaultPLCUnit" Value="None"/>
+  <Property Name="DefaultPLCUnit" Value="Source[embedded].Unit[PLCUnit]"/>
   <Property Name="Description" Value=""/>
   <Property Name="InternalUnitTextIndex" Value="0"/>
   <Property Name="RuntimeUnitChange" Value="None"/>
@@ -13,30 +13,70 @@
     <Property Name="Index" Value="65536"/>
     <TextSnippets/>
     <TextLayer LanguageId="en">
-      <Text ID="209465" Value=""/>
+      <Text ID="209465" Value="Time"/>
       <Text ID="209466" Value="minutos"/>
       <Text ID="209467" Value="min."/>
+      <Text ID="215073" Value="segundos"/>
+      <Text ID="215074" Value="s."/>
+      <Text ID="215075" Value=""/>
+      <Text ID="215076" Value=""/>
     </TextLayer>
     <TextLayer LanguageId="de">
       <Text ID="209465" Value=""/>
       <Text ID="209466" Value=""/>
       <Text ID="209467" Value=""/>
+      <Text ID="215073" Value=""/>
+      <Text ID="215074" Value=""/>
+      <Text ID="215075" Value=""/>
+      <Text ID="215076" Value=""/>
     </TextLayer>
     <IndexMap>
       <Index ID="209465" Value="0"/>
       <Index ID="209466" Value="1"/>
       <Index ID="209467" Value="2"/>
+      <Index ID="215073" Value="3"/>
+      <Index ID="215074" Value="4"/>
+      <Index ID="215075" Value="5"/>
+      <Index ID="215076" Value="6"/>
     </IndexMap>
   </TextGroup>
   <Units>
-    <Unit ClassId="0x00000603" Name="Minutos">
+    <Unit ClassId="0x00000602" Name="Minutos">
       <Property Name="DefaultPrecisionDatapoint" Value="None"/>
       <Property Name="Description" Value=""/>
-      <Property Name="Index" Value="0"/>
+      <Property Name="Factor" Value="60"/>
+      <Property Name="Index" Value="2"/>
+      <Property Name="Offset" Value="0"/>
       <Property Name="Text_Abbreviation_TextGroup" Value="None"/>
       <Property Name="Text_Abbreviation_TextIndex" Value="2"/>
       <Property Name="Text_Description_TextGroup" Value="None"/>
       <Property Name="Text_Description_TextIndex" Value="1"/>
+      <Property Name="UnitFraction" Value="False"/>
+      <Property Name="Unit_DefaultPrecision" Value="1"/>
+    </Unit>
+    <Unit ClassId="0x00000603" Name="Segundos">
+      <Property Name="DefaultPrecisionDatapoint" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Index" Value="1"/>
+      <Property Name="Text_Abbreviation_TextGroup" Value="None"/>
+      <Property Name="Text_Abbreviation_TextIndex" Value="4"/>
+      <Property Name="Text_Description_TextGroup" Value="None"/>
+      <Property Name="Text_Description_TextIndex" Value="3"/>
+      <Property Name="UnitFraction" Value="False"/>
+      <Property Name="Unit_DefaultPrecision" Value="0"/>
+      <Property Name="Value[0].Internal" Value="0"/>
+      <Property Name="Value[0].Scaled" Value="0"/>
+      <Property Name="Value[1].Internal" Value="1"/>
+      <Property Name="Value[1].Scaled" Value="1"/>
+    </Unit>
+    <Unit ClassId="0x00000603" Name="PLCUnit">
+      <Property Name="DefaultPrecisionDatapoint" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="Index" Value="0"/>
+      <Property Name="Text_Abbreviation_TextGroup" Value="None"/>
+      <Property Name="Text_Abbreviation_TextIndex" Value="5"/>
+      <Property Name="Text_Description_TextGroup" Value="None"/>
+      <Property Name="Text_Description_TextIndex" Value="6"/>
       <Property Name="UnitFraction" Value="False"/>
       <Property Name="Unit_DefaultPrecision" Value="1"/>
       <Property Name="Value[0].Internal" Value="0"/>

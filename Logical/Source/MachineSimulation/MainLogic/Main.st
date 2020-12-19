@@ -11,6 +11,9 @@ PROGRAM _INIT
 	
 	tiempoCiclo := 5;
 	
+	//Se pasa la variable local a la global
+	tiempoDeCiclo := tiempoCiclo;
+	
 	//Escondiendo los pop up's
 	idlePopUpStatus 			 := HIDE;
 	maintenancePopUpStatus	     := HIDE;
@@ -19,6 +22,9 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	
+	//Se pasa la variable local a la global
+	tiempoDeCiclo := tiempoCiclo;
 	
 	DTStructureGetTime_0(enable := TRUE, pDTStructure := ADR(sysTime));
 	

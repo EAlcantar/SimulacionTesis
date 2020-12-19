@@ -17592,8 +17592,8 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="None"/>
-            <Property Name="UnitGroup" Value="None"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="SCALED"/>
@@ -17604,8 +17604,8 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="None"/>
-            <Property Name="UnitGroup" Value="None"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="SCALED"/>
@@ -17616,8 +17616,8 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="None"/>
-            <Property Name="UnitGroup" Value="None"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="SCALED"/>
@@ -17628,8 +17628,8 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="None"/>
-            <Property Name="UnitGroup" Value="None"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="SCALED"/>
@@ -17661,8 +17661,82 @@
             <Property Name="UserID" Value="None"/>
             <Property Name="VCType" Value="BOOL"/>
           </DataPoint>
+          <DataPoint Name="tiempoEnProduccion">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="Source\Visualization\Visu"/>
+            <Property Name="DPLimit" Value="None"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="REAL"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="SCALED"/>
+          </DataPoint>
+          <DataPoint Name="maintenanceTimeBalloonStatus">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="Source\Visualization\Visu"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="USINT"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="INTEGER"/>
+          </DataPoint>
+          <DataPoint Name="tiempoCiclo">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="Source\Visualization\Visu"/>
+            <Property Name="DPLimit" Value="None"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="REAL"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="SCALED"/>
+          </DataPoint>
+          <DataPoint Name="tiempoRetrabajo">
+            <Property Name="ConnectedBySharedResource" Value="False"/>
+            <Property Name="ConnectingVisus" Value="Source\Visualization\Visu"/>
+            <Property Name="DPLimit" Value="None"/>
+            <Property Name="Description" Value=""/>
+            <Property Name="PLCType" Value="REAL"/>
+            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
+            <Property Name="UpdateTime" Value="Default"/>
+            <Property Name="UserID" Value="None"/>
+            <Property Name="VCType" Value="SCALED"/>
+          </DataPoint>
         </Folder>
       </Folder>
     </Folder>
+    <DataPoint Name="piezasRechazadas">
+      <Property Name="ConnectedBySharedResource" Value="False"/>
+      <Property Name="ConnectingVisus" Value="Source\Visualization\Visu"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="PLCType" Value="DINT"/>
+      <Property Name="UpdateTime" Value="Default"/>
+      <Property Name="UserID" Value="None"/>
+      <Property Name="VCType" Value="INTEGER"/>
+    </DataPoint>
+    <DataPoint Name="piezasProducidasTotales">
+      <Property Name="ConnectedBySharedResource" Value="False"/>
+      <Property Name="ConnectingVisus" Value="Source\Visualization\Visu"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="PLCType" Value="DINT"/>
+      <Property Name="UpdateTime" Value="Default"/>
+      <Property Name="UserID" Value="None"/>
+      <Property Name="VCType" Value="INTEGER"/>
+    </DataPoint>
+    <DataPoint Name="tiempoDeCiclo">
+      <Property Name="ConnectedBySharedResource" Value="False"/>
+      <Property Name="DPLimit" Value="Default"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="PLCType" Value="REAL"/>
+      <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
+      <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
+      <Property Name="UpdateTime" Value="Default"/>
+      <Property Name="UserID" Value="None"/>
+      <Property Name="VCType" Value="SCALED"/>
+    </DataPoint>
   </DataPoints>
 </DataSource>

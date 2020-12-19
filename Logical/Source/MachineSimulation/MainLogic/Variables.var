@@ -5,7 +5,11 @@ VAR
 	DTStructureGetTime_0 : DTStructureGetTime;
 	sysTime : DTStructure;
 	random : REAL;
+END_VAR
+VAR RETAIN
 	tiempoCiclo : REAL;
+END_VAR
+VAR
 	RTInfo_0 : RTInfo;
 	cuentaTiempo : REAL;
 	rejected : SINT;

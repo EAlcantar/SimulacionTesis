@@ -4,30 +4,16 @@
     <Group ID="Oee">
       <Group ID="Shifts">
         <Group ID="[0]">
-          <Property ID="Name" Value="Morning" />
+          <Property ID="Name" Value="Shift 1" />
           <Group ID="TotalTime">
-            <Property ID="Start" Value="21600000" />
-            <Property ID="End" Value="50400000" />
+            <Property ID="Start" Value="32400000" />
+            <Property ID="End" Value="64800000" />
           </Group>
           <Group ID="ScheduledDowntime">
             <Group ID="[0]">
               <Property ID="Reason" Value="Lunch" />
-              <Property ID="Start" Value="39600000" />
-              <Property ID="End" Value="41400000" />
-            </Group>
-          </Group>
-        </Group>
-        <Group ID="[1]">
-          <Property ID="Name" Value="Afternoon" />
-          <Group ID="TotalTime">
-            <Property ID="Start" Value="50400000" />
-            <Property ID="End" Value="79200000" />
-          </Group>
-          <Group ID="ScheduledDowntime">
-            <Group ID="[0]">
-              <Property ID="Reason" Value="Dinner" />
-              <Property ID="Start" Value="64800000" />
-              <Property ID="End" Value="66600000" />
+              <Property ID="Start" Value="50400000" />
+              <Property ID="End" Value="54000000" />
             </Group>
           </Group>
         </Group>

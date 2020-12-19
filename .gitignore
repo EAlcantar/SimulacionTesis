@@ -6,3 +6,5 @@ Temp/
 Binaries/
 
 Diagnosis/
+
+*.isopen

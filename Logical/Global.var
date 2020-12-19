@@ -2,4 +2,5 @@ VAR
 	piezasProducidasTotales : DINT;
 	piezasProducidas : DINT;
 	piezasRechazadas : DINT;
+	tiempoDeCiclo : REAL;
 END_VAR
