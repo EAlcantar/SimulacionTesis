@@ -17592,7 +17592,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
@@ -17604,7 +17604,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
@@ -17616,7 +17616,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
@@ -17628,7 +17628,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
@@ -17667,7 +17667,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
@@ -17688,7 +17688,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>
@@ -17700,7 +17700,7 @@
             <Property Name="DPLimit" Value="None"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="REAL"/>
-            <Property Name="PLCUnit" Value="Default"/>
+            <Property Name="PLCUnit" Value="Source[relative:UnitGroup].Unit[Segundos]"/>
             <Property Name="UnitGroup" Value="Source[global].UnitGroup[Time]"/>
             <Property Name="UpdateTime" Value="Default"/>
             <Property Name="UserID" Value="None"/>

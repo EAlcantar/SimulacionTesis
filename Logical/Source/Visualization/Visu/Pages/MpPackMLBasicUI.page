@@ -1675,7 +1675,7 @@
           <Property Name="TextIndexOffset" Value="19"/>
           <Property Name="TextSource" Value="SingleText"/>
           <Property Name="Top" Value="391"/>
-          <Property Name="Width" Value="60"/>
+          <Property Name="Width" Value="63"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_2">
           <Property Name="AlignmentHorizontal" Value="Center"/>
@@ -1843,7 +1843,7 @@
           <Property Name="ControlID" Value="0"/>
           <Property Name="Description" Value=""/>
           <Property Name="Height" Value="40"/>
-          <Property Name="Left" Value="521"/>
+          <Property Name="Left" Value="520"/>
           <Property Name="MaxDatapoint" Value="None"/>
           <Property Name="MaxValue" Value="None"/>
           <Property Name="MinDatapoint" Value="None"/>
@@ -1854,7 +1854,7 @@
           <Property Name="Top" Value="430"/>
           <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.piezasRechazadas]"/>
           <Property Name="ValueMode" Value="Standard"/>
-          <Property Name="Width" Value="60"/>
+          <Property Name="Width" Value="63"/>
         </Control>
         <Control ClassId="0x00001004" Name="Text_6">
           <Property Name="AlignmentHorizontal" Value="Center"/>
