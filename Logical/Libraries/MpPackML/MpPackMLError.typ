@@ -23,8 +23,14 @@ TYPE
         mpPACKML_ERR_MISSING_UI_CONNECT := -1064008696, (* UIConnect is NULL [Error: 33800, 0xc0948408] *)
         mpPACKML_WRN_TAGS_STR_NOT_FOUND := -2137750519, (* PackTags structure {2.PackTagsStruct} configured not found [Warning: 33801, 0x80948409] *)
         mpPACKML_WRN_TAGS_NOT_FOUND := -2137750518, (* PackTags PV {2.PackTagsPV} required into the minimal set was not found [Warning: 33802, 0x8094840a] *)
-        mpPACKML_WRN_WRONG_TAGS_TYPE := -2137750517, (* Wrong PackTags data type for Tag {2.TagName}: expected {3.ExpectedSize} bytes, was {3.FoundSize} bytes [Warning: 33803, 0x8094840b] *)
+        mpPACKML_WRN_WRONG_TAGS_TYPE := -2137750517, (* Wrong PackTags data type for Tag {2.TagName}: expected {3.ExpectedSize} bytes, was {4.FoundSize} bytes [Warning: 33803, 0x8094840b] *)
         mpPACKML_ERR_READ_MPPACKML_CFG := -1064008692, (* Read {2.ConfigSection} configuration failed: {1.ErrorCode} [Error: 33804, 0xc094840c] *)
-        mpPACKML_ERR_WRITE_MPPACKML_CFG := -1064008691 (* Write {2.ConfigSection} configuration failed: {1.ErrorCode} [Error: 33805, 0xc094840d] *)
+        mpPACKML_ERR_WRITE_MPPACKML_CFG := -1064008691, (* Write {2.ConfigSection} configuration failed: {1.ErrorCode} [Error: 33805, 0xc094840d] *)
+        mpPACKML_ERR_INVALID_MODULE := -1064008690, (* The mode change only allowed by the unit module {1.ErrorCode} [Error: 33806, 0xc094840e] *)
+        mpPACKML_ERR_INVALID_STATE := -1064008689, (* The current state does not allow mode change {1.ErrorCode} [Error: 33807, 0xc094840f] *)
+        mpPACKML_INF_PARENT_NOT_ACTIVE := 1083474960, (* Parent not active {1.ErrorCode} [Informational: 33808, 0x40948410] *)
+        mpPACKML_WRN_AMBIQUOUS_MODE_INF := -2137750511, (* Wrong mode information added in the configuration: {2.TypeInfo} {1.ErrorCode} [Warning: 33809, 0x80948411] *)
+        mpPACKML_ERR_INVALID_STATE_MODE := -1064008686, (* The current state is not enabled in target mode {1.ErrorCode} [Error: 33810, 0xc0948412] *)
+        mpPACKML_ERR_INVALID_STATE_CHLD := -1064008685 (* The hierarchy is not synchronized. Mode change not allowed {1.ErrorCode} [Error: 33811, 0xc0948413] *)
         );
 END_TYPE

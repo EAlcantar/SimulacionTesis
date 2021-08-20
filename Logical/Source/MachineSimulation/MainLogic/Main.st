@@ -23,6 +23,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	
 	//Se pasa la variable local a la global
 	tiempoDeCiclo := tiempoCiclo;
 	

@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpPackML 5.08.0 */
+/* MpPackML 5.14.1 */
 
 #ifndef _MPPACKML_
 #define _MPPACKML_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpPackML_VERSION
-#define _MpPackML_VERSION 5.08.0
+#define _MpPackML_VERSION 5.14.1
 #endif
 
 #include <bur/plctypes.h>
@@ -17,12 +17,12 @@ extern "C"
 #ifndef _BUR_PUBLIC
 #define _BUR_PUBLIC
 #endif
-#ifdef _SG4
+#ifdef _SG3
 		#include "MpBase.h"
 		#include "astime.h"
 #endif
 
-#ifdef _SG3
+#ifdef _SG4
 		#include "MpBase.h"
 		#include "astime.h"
 #endif
@@ -31,6 +31,8 @@ extern "C"
 		#include "MpBase.h"
 		#include "astime.h"
 #endif
+
+
 
 /* Datatypes and datatypes of function blocks */
 typedef enum MpPackMLStateEnum
@@ -51,7 +53,10 @@ typedef enum MpPackMLStateEnum
 	mpPACKML_STATE_UNSUSPENDING = 14,
 	mpPACKML_STATE_RESETTING = 15,
 	mpPACKML_STATE_COMPLETING = 16,
-	mpPACKML_STATE_COMPLETE = 17
+	mpPACKML_STATE_COMPLETE = 17,
+	mpPACKML_STATE_DEACTIVATING = 30,
+	mpPACKML_STATE_DEACTIVATED = 31,
+	mpPACKML_STATE_ACTIVATING = 32
 } MpPackMLStateEnum;
 
 typedef enum MpPackMLPackTagsStatusEnum
@@ -87,7 +92,13 @@ typedef enum MpPackMLErrorEnum
 	mpPACKML_WRN_TAGS_NOT_FOUND = -2137750518,
 	mpPACKML_WRN_WRONG_TAGS_TYPE = -2137750517,
 	mpPACKML_ERR_READ_MPPACKML_CFG = -1064008692,
-	mpPACKML_ERR_WRITE_MPPACKML_CFG = -1064008691
+	mpPACKML_ERR_WRITE_MPPACKML_CFG = -1064008691,
+	mpPACKML_ERR_INVALID_MODULE = -1064008690,
+	mpPACKML_ERR_INVALID_STATE = -1064008689,
+	mpPACKML_INF_PARENT_NOT_ACTIVE = 1083474960,
+	mpPACKML_WRN_AMBIQUOUS_MODE_INF = -2137750511,
+	mpPACKML_ERR_INVALID_STATE_MODE = -1064008686,
+	mpPACKML_ERR_INVALID_STATE_CHLD = -1064008685
 } MpPackMLErrorEnum;
 
 typedef enum MpPackMLAlarmEnum
@@ -220,6 +231,57 @@ typedef struct MpPackMLStatisticsUIConnectType
 	enum MpPackMLStateEnum StateCurrent;
 } MpPackMLStatisticsUIConnectType;
 
+typedef struct MpPackMLModuleCommandType
+{	plcbit Abort;
+	plcbit Clear;
+	plcbit Stop;
+	plcbit Reset;
+	plcbit Start;
+	plcbit Hold;
+	plcbit Unhold;
+	plcbit Suspend;
+	plcbit Unsuspend;
+	plcbit StateComplete;
+} MpPackMLModuleCommandType;
+
+typedef struct MpPackMLModuleOverwriteType
+{	plcbit Abort;
+	plcbit Stop;
+	plcbit AllOtherCommands;
+} MpPackMLModuleOverwriteType;
+
+typedef struct MpPackMLModuleEscalateType
+{	plcbit Abort;
+} MpPackMLModuleEscalateType;
+
+typedef struct MpPackMLModuleParType
+{	struct MpPackMLModuleOverwriteType Overwrite;
+	struct MpPackMLModuleEscalateType Escalate;
+} MpPackMLModuleParType;
+
+typedef struct MpPackMLParentType
+{	plcstring Name[256];
+	enum MpPackMLStateEnum StateCurrent;
+	signed long SubStateCurrent;
+} MpPackMLParentType;
+
+typedef struct MpPackMLModuleInfoType
+{	plcstring ModeCurrent[51];
+	plcstring StateCurrent[21];
+	unsigned long ChildCount;
+	struct MpPackMLParentType Parent;
+	unsigned long Level;
+	plcbit ReadyForCommand;
+	struct MpPackMLDiagType Diag;
+} MpPackMLModuleInfoType;
+
+typedef struct MpPackMLModulePVType
+{	plcstring Name[256];
+	enum MpPackMLStateEnum StateCurrent;
+	signed long SubStateCurrent;
+	plcstring StateInfo[256];
+} MpPackMLModulePVType;
+
 typedef struct MpPackMLCore
 {
 	/* VAR_INPUT (analog) */
@@ -307,6 +369,34 @@ typedef struct MpPackMLStatisticsUI
 	plcbit Error;
 } MpPackMLStatisticsUI_typ;
 
+typedef struct MpPackMLModule
+{
+	/* VAR_INPUT (analog) */
+	struct MpComIdentType* MpLink;
+	struct MpPackMLModuleParType* Parameters;
+	struct MpPackMLModuleCommandType Command;
+	signed long SubState;
+	plcstring StateInfo[256];
+	/* VAR_OUTPUT (analog) */
+	signed long StatusID;
+	enum MpPackMLStateEnum StateCurrent;
+	signed long SubStateCurrent;
+	signed long ModeID;
+	struct MpPackMLModuleInfoType Info;
+	/* VAR (analog) */
+	struct MpComInternalDataType Internal;
+	/* VAR_INPUT (digital) */
+	plcbit Enable;
+	plcbit ErrorReset;
+	plcbit Update;
+	plcbit Blocked;
+	plcbit Starved;
+	/* VAR_OUTPUT (digital) */
+	plcbit Active;
+	plcbit Error;
+	plcbit UpdateDone;
+} MpPackMLModule_typ;
+
 
 
 /* Prototyping of functions and function blocks */
@@ -314,6 +404,8 @@ _BUR_PUBLIC void MpPackMLCore(struct MpPackMLCore* inst);
 _BUR_PUBLIC void MpPackMLMode(struct MpPackMLMode* inst);
 _BUR_PUBLIC void MpPackMLBasicUI(struct MpPackMLBasicUI* inst);
 _BUR_PUBLIC void MpPackMLStatisticsUI(struct MpPackMLStatisticsUI* inst);
+_BUR_PUBLIC void MpPackMLModule(struct MpPackMLModule* inst);
+_BUR_PUBLIC signed long MpPackMLChangeMode(struct MpComIdentType* MpLink, signed long ModeID);
 _BUR_PUBLIC signed long MpPackMLModeCurrent(struct MpComIdentType* MpLink);
 _BUR_PUBLIC MpPackMLStateEnum MpPackMLStateCurrent(struct MpComIdentType* MpLink);
 _BUR_PUBLIC plcbit MpPackMLStateIsActive(struct MpComIdentType* MpLink, enum MpPackMLStateEnum State, signed long Mode);

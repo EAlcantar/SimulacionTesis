@@ -1,4 +1,5 @@
 VAR
+	paro : BOOL;
 	piezasProducidasTotales : DINT;
 	piezasProducidas : DINT;
 	piezasRechazadas : DINT;

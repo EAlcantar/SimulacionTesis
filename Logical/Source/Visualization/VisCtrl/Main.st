@@ -14,6 +14,10 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	
+	IF EDGENEG(paro) THEN
+		MpPackMLBasicUIConnect.StateControl.Stop := TRUE;
+	END_IF;
+	
 	MpPackMLBasicUI_Simulador(Enable := FALSE);
 	MpPackMLStatisticsUI_0(Enable := FALSE);
 	

@@ -129,7 +129,10 @@ TYPE
 		mpPACKML_STATE_UNSUSPENDING := 14, (*PackML UNSUSPENDING state*)
 		mpPACKML_STATE_RESETTING := 15, (*PackML RESETTING state*)
 		mpPACKML_STATE_COMPLETING := 16, (*PackML COMPLETING state*)
-		mpPACKML_STATE_COMPLETE := 17 (*PackML COMPLETE state*)
+		mpPACKML_STATE_COMPLETE := 17, (*PackML COMPLETE state*)
+		mpPACKML_STATE_DEACTIVATING := 30, (*Deactivating state. Not a standard PackML state*)
+		mpPACKML_STATE_DEACTIVATED := 31, (*Deactivated state. Not a standard PackML state*)
+		mpPACKML_STATE_ACTIVATING := 32 (*Activating state. Not a standard PackML state*)
 		);
 	MpPackMLPackTagsStatusEnum : 
 		(
@@ -140,4 +143,49 @@ TYPE
 		mpPACKML_PACKTAGS_ERROR_TYPE := 10, (*PackTags initialization finshed with error: tag has wrong datatype*)
 		mpPACKML_PACKTAGS_ERROR_STRUCT := 14 (*PackTags initialization finshed with error: structure configured not found*)
 		);
+	MpPackMLModuleCommandType : 	STRUCT 
+		Abort : BOOL; (*Go to state Aborting - Can be set in all states except Aborting and Aborted.*)
+		Clear : BOOL; (*Go to state Clearing - Can only be set in state Aborted.*)
+		Stop : BOOL; (*Go to state Stopping - Can be set in all states except Aborting, Aborted, Clearing, Stopping and Stopped.*)
+		Reset : BOOL; (*Go to state Resetting - Can only be set in state Stopped.*)
+		Start : BOOL; (*Go to state Starting - Can only be set in state Idle.*)
+		Hold : BOOL; (*Go to state Holding. Can only be set in state Execute.*)
+		Unhold : BOOL; (*Go to state Unholding. Can only be set in state Held.*)
+		Suspend : BOOL; (*Go to state Suspending. Can only be set in state Execute.*)
+		Unsuspend : BOOL; (*Go to state Unsuspending. Can only be set in state Suspended.*)
+		StateComplete : BOOL; (*Go to next waiting state. Can be set in all acting states and state Execute.*)
+	END_STRUCT;
+	MpPackMLModuleParType : 	STRUCT  (*Parameter structure*)
+		Overwrite : MpPackMLModuleOverwriteType; (*Inputs that are overwritten by parent module.*)
+		Escalate : MpPackMLModuleEscalateType; (*Escalate command to parent module.*)
+	END_STRUCT;
+	MpPackMLModuleInfoType : 	STRUCT 
+		ModeCurrent : STRING[50]; (*Current mode*)
+		StateCurrent : STRING[20]; (*Current state*)
+		ChildCount : UDINT; (*How many children are registered to this module. Even when desynchronised the child count will still be valid.*)
+		Parent : MpPackMLParentType; (*Information about the parent module.*)
+		Level : UDINT; (*Level in the hierarchy. Parent is level 0.*)
+		ReadyForCommand : BOOL; (*Indicates that command state complete has been set to true and that the module is ready to receive a command.
+*)
+		Diag : MpPackMLDiagType; (*Diagnostic structure for the status ID*)
+	END_STRUCT;
+	MpPackMLParentType : 	STRUCT  (*Information about the parent module.*)
+		Name : STRING[255] := ''; (*Name of the module from the module configuration.*)
+		StateCurrent : MpPackMLStateEnum := mpPACKML_STATE_UNDEFINED; (*Current parent state.*)
+		SubStateCurrent : DINT := 0; (*Current parent sub state.*)
+	END_STRUCT;
+	MpPackMLModuleOverwriteType : 	STRUCT  (*Inputs that are overwritten by parent module.*)
+		Abort : BOOL := TRUE; (*Overwite Abort command from parent module.*)
+		Stop : BOOL := TRUE; (*Overwite Stop command from parent module.*)
+		AllOtherCommands : BOOL := TRUE; (*Overwite all other commands from parent module.*)
+	END_STRUCT;
+	MpPackMLModuleEscalateType : 	STRUCT  (*Escalate command to parent module.*)
+		Abort : BOOL := TRUE; (*Escalate an Abort command to parent module.*)
+	END_STRUCT;
+	MpPackMLModulePVType : 	STRUCT  (*This structure provides information about a certain module.*)
+		Name : STRING[255] := ''; (*Name of the module from the module configuration.*)
+		StateCurrent : MpPackMLStateEnum := mpPACKML_STATE_UNDEFINED; (*Module state.*)
+		SubStateCurrent : DINT := 0; (*Module sub state*)
+		StateInfo : STRING[255] := ''; (*Module state information*)
+	END_STRUCT;
 END_TYPE

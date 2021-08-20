@@ -86,6 +86,41 @@ FUNCTION_BLOCK MpPackMLStatisticsUI (*mapp component for connecting a VC4 visual
 	END_VAR
 END_FUNCTION_BLOCK
 
+FUNCTION_BLOCK MpPackMLModule (*Synchronized PackML state machine handling*) (* $GROUP=mapp Services,$CAT=OMAC PackML,$GROUPICON=Icon_mapp.png,$CATICON=Icon_MpPackML.png *)
+	VAR_INPUT
+		MpLink : REFERENCE TO MpComIdentType; (*Connection to mapp*) (* *) (*#PAR#;*)
+		Enable : BOOL; (*Enables/Disables the function block*) (* *) (*#PAR#;*)
+		ErrorReset : BOOL; (*Resets function block errors*) (* *) (*#PAR#;*)
+		Parameters : REFERENCE TO MpPackMLModuleParType; (*Parameters*) (* *) (*#PAR#;*)
+		Update : BOOL; (*Updates the parameters*) (* *) (*#PAR#;*)
+		Blocked : BOOL; (*Indicates that the machine is blocked and signals the top module to send out a Suspend command. When the signal is set to false the top module will send out a Unsuspend command.*) (* *) (*#CYC#OPT#;*)
+		Starved : BOOL; (*Indicates that the machine is starved and signals the top module to send out a Suspend command. When the signal is set to false the top module will send out a Unsuspend command.*) (* *) (*#CYC#OPT#;*)
+		Command : MpPackMLModuleCommandType; (*Control commands from ISA-TR88.00.02 commands.*) (* *) (*#CMD#;*)
+		SubState : DINT; (*The sub state of the module. Can be used for programming the sequence inside a PackML state. Will automatically be reset to 0 by a PackML state change.*) (* *) (*#CYC#;*)
+		StateInfo : STRING[255]; (*Status of what the substate is doing or waiting for. Will also be used for logging.*) (* *) (*#CYC#;*)
+	END_VAR
+	VAR_OUTPUT
+		Active : BOOL; (*Indicates whether the function block is active*) (* *) (*#PAR#;*)
+		Error : BOOL; (*Indicates that the function block is in an error state or a command was not executed correctly*) (* *) (*#PAR#;*)
+		StatusID : DINT; (*Status information about the function block*) (* *) (*#PAR#; *)
+		UpdateDone : BOOL; (*Update of parameters done*) (* *) (*#PAR#; *)
+		StateCurrent : MpPackMLStateEnum; (*Current state*) (* *) (*#CMD#;*)
+		SubStateCurrent : DINT; (*Current sub state*) (* *) (*#CMD#;*)
+		ModeID : DINT; (*Unique identification number for each mode*) (* *) (*#CMD#;*)
+		Info : MpPackMLModuleInfoType; (*Additional information about the component*) (* *) (*#CMD#; *)
+	END_VAR
+	VAR
+		Internal : {REDUND_UNREPLICABLE} MpComInternalDataType; (*Internal data*) (* *) (*#OMIT#;*)
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION MpPackMLChangeMode : DINT (*Function changing the mode of a MpPackMLModule*) (* $GROUP=mapp Services,$CAT=OMAC PackML,$GROUPICON=Icon_mapp.png,$CATICON=Icon_MpPackML.png *)
+	VAR_INPUT
+		MpLink : MpComIdentType; (*Connection to mapp. Must be of type mppackmlcore configuration*) (* *) (*#PAR#;*)
+		ModeID : DINT; (*Desired mode to change to. The mode must be defined in the mppackmlcore configuration*) (* *) (*#PAR#;*)
+	END_VAR
+END_FUNCTION
+
 FUNCTION MpPackMLModeCurrent : DINT (*Returns the current mode as an ID*) (* $GROUP=mapp Services,$CAT=OMAC PackML,$GROUPICON=Icon_mapp.png,$CATICON=Icon_MpPackML.png *)
 	VAR_INPUT
 		MpLink : MpComIdentType; (*Connection to mapp*) (* *) (*#PAR#;*)
